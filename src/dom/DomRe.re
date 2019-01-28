@@ -46,6 +46,7 @@ module PopStateEvent = PopStateEventRe;
 module ProgressEvent = ProgressEventRe;
 module Range = RangeRe;
 module RelatedEvent = RelatedEventRe;
+module Screen = ScreenRe;
 module Selection = SelectionRe;
 module ShadowRoot = ShadowRootRe;
 module StorageEvent = StorageEventRe;

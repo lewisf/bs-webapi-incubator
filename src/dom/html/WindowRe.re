@@ -7,8 +7,8 @@ type menubar; /* "bar object" */
 type navigator;
 type performance; /* Web Performance API */
 type personalbar; /* "bar object" */
-type screen;
 type scrollbars; /* "bar object" */
+type screen;
 type speechSynthesis;
 type statusbar; /* "bar object" */
 type toolbar; /* "bar object" */
@@ -49,7 +49,7 @@ module Impl = (T: {type t;}) => {
   [@bs.get] external parent : t_window => Dom.window = "";
   [@bs.get] external performance : t_window => performance = "";
   [@bs.get] external personalbar : t_window => personalbar = "";
-  [@bs.get] external screen : t_window => screen = "";
+  [@bs.get] external screen : t_window => ScreenRe.t = "";
   [@bs.get] external screenX : t_window => int = "";
   [@bs.get] external screenY : t_window => int = "";
   [@bs.get] external scrollbars : t_window => scrollbars = "";
