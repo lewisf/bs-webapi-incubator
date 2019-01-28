@@ -22,6 +22,7 @@ module Impl = (T: {type t;}) => {
 
   /* A lot of this isn't really "dom", but rather global exports */
 
+  [@bs.get] external closed : t_window => bool = "";
   [@bs.get] external console : t_window => console = "";
   [@bs.get] external crypto : t_window => crypto = "";
   [@bs.get] external document : t_window => Dom.document = "";
@@ -69,7 +70,6 @@ module Impl = (T: {type t;}) => {
   [@bs.send.pipe : t_window] external blur : unit = "";
   [@bs.send.pipe : t_window] external cancelIdleCallback : idleCallbackId => unit = ""; /* experimental, Cooperative Scheduling of Background Tasks */
   [@bs.send.pipe : t_window] external close : unit = "";
-  [@bs.send.pipe : t_window] external closed : bool = "";
   [@bs.send.pipe : t_window] external confirm : string => bool = "";
   [@bs.send.pipe : t_window] external focus : unit = "";
   [@bs.send.pipe : t_window] external getComputedStyle : Dom.element => Dom.cssStyleDeclaration = "";
